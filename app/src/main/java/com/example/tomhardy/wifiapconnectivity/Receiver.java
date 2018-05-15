@@ -51,7 +51,7 @@ public class Receiver extends AppCompatActivity {
         });
         mHomeWatcher.startWatch();
 
-        wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
         try {       // getting device hotspot Configuration,no need to memory allocation
             deviceWifiApConfiguration = (WifiConfiguration) wifiManager.getClass().getMethod("getWifiApConfiguration").invoke(wifiManager);

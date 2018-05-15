@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         deviceWifiState = wifiManager.isWifiEnabled();
         Log.d("Main","onCreate");
     }

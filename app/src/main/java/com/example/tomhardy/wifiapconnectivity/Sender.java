@@ -77,7 +77,7 @@ public class Sender extends AppCompatActivity {
         };
 
         listView = (ListView) findViewById(R.id.list);
-        wifiManager = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
         listView.setOnItemLongClickListener(onItemLongClickListener);
 
